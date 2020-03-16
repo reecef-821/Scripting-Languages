@@ -1,0 +1,19 @@
+#!/bin/bash
+#Prompts the user asking if they want to enter a filename
+echo Please enter your filename:
+#Reads in the file name to the system
+read filename
+#Prompts the user asking if they want to enter a password
+echo Please enter a password:
+#Reads the password into the system
+read password
+#Outputs the filename to the user
+echo $filename
+#Displays the entered password for reference
+echo $password
+#Makes the directory for the chosen folder name
+mkdir $filename
+#This is now storing the typed password into a file in the same folder
+echo $password > secret.txt
+#Lists everything in the current directory
+ls
